@@ -1,0 +1,335 @@
+/* --- Base Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #fcfcfc;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* --- Header & Navigation --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #b83280; /* Elegant Rose Gold / Pink tint accent */
+    letter-spacing: 1px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #555;
+    margin-left: 25px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover, header nav a.active {
+    color: #b83280;
+}
+
+/* --- Buttons --- */
+.btn {
+    display: inline-block;
+    background-color: #b83280;
+    color: #fff;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #97266d;
+}
+
+/* --- Hero Section --- */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 25px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Highlights Section --- */
+.highlights {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background: #fff;
+    padding: 40px 8%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+}
+
+.highlight-box {
+    text-align: center;
+    flex: 1;
+    min-width: 250px;
+    padding: 20px;
+}
+
+.highlight-box i {
+    font-size: 32px;
+    color: #b83280;
+    margin-bottom: 15px;
+}
+
+.highlight-box h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.highlight-box p {
+    color: #777;
+    font-size: 14px;
+}
+
+/* --- Collections Grid --- */
+.collection-section {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.collection-section h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #222;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: #fff;
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    border-top: 4px solid #b83280;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.card p {
+    color: #666;
+    font-size: 14px;
+}
+
+/* --- Reviews Section --- */
+.reviews-section {
+    background-color: #f3f4f6;
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.reviews-section h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.rating-summary {
+    margin-bottom: 40px;
+}
+
+.rating-num {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.stars {
+    color: #f6ad55;
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+.total-reviews {
+    color: #666;
+    font-size: 14px;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.review-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    text-align: left;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+}
+
+.review-card p {
+    font-style: italic;
+    color: #444;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.review-card h4 {
+    color: #b83280;
+    font-size: 14px;
+}
+
+/* --- Contact Page Specific Styles --- */
+.contact-section {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 32px;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+    text-align: left;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.info-item i {
+    font-size: 24px;
+    color: #b83280;
+    margin-right: 20px;
+    margin-top: 4px;
+}
+
+.info-item h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.info-item p, .info-item a {
+    color: #555;
+    text-decoration: none;
+}
+
+.info-item a:hover {
+    text-decoration: underline;
+}
+
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.contact-form h3 {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: #b83280;
+}
+
+/* --- Footer --- */
+footer {
+    background: #222;
+    color: #aaa;
+    text-align: center;
+    padding: 25px;
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+/* --- Mobile Responsiveness --- */
+@media(max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 15px;
+    }
+    header nav {
+        margin-top: 15px;
+    }
+    header nav a {
+        margin: 0 10px;
+    }
+    .hero-content h1 {
+        font-size: 30px;
+    }
+    .contact-container {
+        flex-direction: column;
+    }
+}
